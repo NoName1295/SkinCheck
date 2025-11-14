@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkinCheck - Cuidado de la Piel</title>
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Fuente -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <div class="logo"><i class="fas fa-feather-alt"></i> SkinCheck</div>
+
+        <!-- Icono Hamburguesa -->
+        <div class="menu-btn" id="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Enlaces de navegación -->
+        <ul class="nav-links" id="nav-list">
+          <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
+          <li><a href="#nosotros" onclick="closeMenu()">Nosotros</a></li>
+          <li><a href="#servicios" onclick="closeMenu()">Servicios</a></li>
+          <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>Revitaliza tu belleza natural</h1>
+          <p>
+            Tratamientos dermatológicos de vanguardia diseñados exclusivamente
+            para la salud y luminosidad de tu piel.
+          </p>
+          <a href="#contacto" class="btn">Agenda tu Cita</a>
+        </div>
+        <div class="hero-visual">
+          <!-- Simulación de imagen con icono animado -->
+          <i class="fas fa-spa hero-icon"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros" class="section">
+      <div class="section-header">
+        <h2>Nuestra Filosofía</h2>
+        <p>
+          Creemos que una piel sana es el reflejo de un bienestar integral.
+          Unimos ciencia y estética para ti.
+        </p>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="section bg-light">
+      <div class="section-header">
+        <h2>Nuestros Servicios</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon-circle"><i class="fas fa-water"></i></div>
+          <h3>Hidratación Profunda</h3>
+          <p>
+            Restaura la barrera natural de tu piel con nuestros sueros
+            enriquecidos.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="icon-circle"><i class="fas fa-sun"></i></div>
+          <h3>Protección Solar</h3>
+          <p>Tratamientos preventivos y correctivos contra el daño UV.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon-circle"><i class="fas fa-leaf"></i></div>
+          <h3>Peeling Orgánico</h3>
+          <p>Renovación celular suave utilizando ácidos frutales naturales.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+      <div class="footer-grid">
+        <!-- Contacto -->
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt" style="margin-right: 8px"></i>
+              Calle Estética 123, Lima
+            </li>
+            <li>
+              <i class="fas fa-phone" style="margin-right: 8px"></i> +51 987 654
+              321
+            </li>
+            <li>
+              <i class="fas fa-envelope" style="margin-right: 8px"></i>
+              citas@dermacare.com
+            </li>
+          </ul>
+        </div>
+
+        <!-- Categorías -->
+        <div class="footer-col">
+          <h3>Categorías</h3>
+          <ul>
+            <li><a href="#">Tratamientos Faciales</a></li>
+            <li><a href="#">Cuidado Corporal</a></li>
+            <li><a href="#">Productos</a></li>
+            <li><a href="#">Blog de Salud</a></li>
+          </ul>
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="footer-col">
+          <h3>Síguenos en</h3>
+          <div class="social-flex">
+            <a href="#" class="social-icon" aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social-icon" aria-label="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="#" class="social-icon" aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copyright">
+        &copy; 2024 DermaCare. Diseñado para tu bienestar.
+      </div>
+    </footer>
+
+    <!-- Script Simple para Menú Móvil -->
+    <script>
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const navList = document.getElementById("nav-list");
+      const menuIcon = menuBtn.querySelector("i");
+
+      function toggleMenu() {
+        navList.classList.toggle("active");
+
+        // Cambiar icono de hamburguesa a X
+        if (navList.classList.contains("active")) {
+          menuIcon.classList.remove("fa-bars");
+          menuIcon.classList.add("fa-times");
+        } else {
+          menuIcon.classList.remove("fa-times");
+          menuIcon.classList.add("fa-bars");
+        }
+      }
+
+      function closeMenu() {
+        navList.classList.remove("active");
+        menuIcon.classList.remove("fa-times");
+        menuIcon.classList.add("fa-bars");
+      }
+
+      menuBtn.addEventListener("click", toggleMenu);
+    </script>
+  </body>
+</html>
