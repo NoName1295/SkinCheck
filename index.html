@@ -139,13 +139,24 @@
         <h2>Vista Previa de la App</h2>
         <p>Así luce SkinCheck en funcionamiento.</p>
       </div>
-
-      <div class="services-grid">
-        <img src="img/app1.jpeg" class="mockup" />
-        <img src="img/app2.jpeg" class="mockup" />
-        <img src="img/app3.jpeg" class="mockup" />
+    
+      <div class="carousel-container">
+        <button class="carousel-btn left" id="btn-left">&#10094;</button>
+    
+        <div class="carousel-track" id="carousel-track">
+          <img src="img/app1.png" class="mockup" />
+          <img src="img/app2.png" class="mockup" />
+          <img src="img/app3.png" class="mockup" />
+          <img src="img/app4.png" class="mockup" /> <!-- duplicadas para loop -->
+          <img src="img/app1.png" class="mockup" />
+          <img src="img/app2.png" class="mockup" />
+          <img src="img/app3.png" class="mockup" />
+          <img src="img/app4.png" class="mockup" />
+        </div>
+    
+        <button class="carousel-btn right" id="btn-right">&#10095;</button>
       </div>
-    </section>
+    </section>    
 
     <!-- CTA -->
     <section class="cta">
@@ -231,5 +242,25 @@
 
       menuBtn.addEventListener("click", toggleMenu);
     </script>
+    <script>
+      const track = document.getElementById("carousel-track");
+      const btnLeft = document.getElementById("btn-left");
+      const btnRight = document.getElementById("btn-right");
+    
+      let position = 0;
+      const move = 300; // tamaño del desplazamiento
+    
+      btnRight.addEventListener("click", () => {
+        position -= move;
+        if (position <= -900) position = 0; 
+        track.style.transform = `translateX(${position}px)`;
+      });
+    
+      btnLeft.addEventListener("click", () => {
+        position += move;
+        if (position > 0) position = -900;
+        track.style.transform = `translateX(${position}px)`;
+      });
+    </script>    
   </body>
 </html>
