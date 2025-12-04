@@ -3,24 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DermaCare - Cuidado de la Piel</title>
+    <title>SkinCheck - Detección Inteligente de Problemas en la Piel</title>
+
     <!-- Iconos -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+
     <!-- Fuente -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <!-- Header -->
     <header>
       <nav>
-        <div class="logo"><i class="fas fa-feather-alt"></i> DermaCare</div>
+        <div class="logo"><i class="fas fa-heartbeat"></i> SkinCheck</div>
 
         <!-- Icono Hamburguesa -->
         <div class="menu-btn" id="mobile-menu-btn">
@@ -30,125 +34,178 @@
         <!-- Enlaces de navegación -->
         <ul class="nav-links" id="nav-list">
           <li><a href="#inicio" onclick="closeMenu()">Inicio</a></li>
-          <li><a href="#nosotros" onclick="closeMenu()">Nosotros</a></li>
-          <li><a href="#servicios" onclick="closeMenu()">Servicios</a></li>
+          <li><a href="#nosotros" onclick="closeMenu()">Propósito</a></li>
+          <li>
+            <a href="#como-funciona" onclick="closeMenu()">Cómo funciona</a>
+          </li>
+          <li><a href="#demo" onclick="closeMenu()">Demo</a></li>
           <li><a href="#contacto" onclick="closeMenu()">Contacto</a></li>
         </ul>
       </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section id="inicio" class="hero">
       <div class="hero-container">
         <div class="hero-text">
-          <h1>Revitaliza tu belleza natural</h1>
+          <h1>Tu salud en un escaneo</h1>
           <p>
-            Tratamientos dermatológicos de vanguardia diseñados exclusivamente
-            para la salud y luminosidad de tu piel.
+            SkinCheck utiliza inteligencia artificial dermatológica para
+            detectar posibles riesgos en tu piel en segundos. Analiza, aprende y
+            cuida tu bienestar desde tu smartphone.
           </p>
-          <a href="#contacto" class="btn">Agenda tu Cita</a>
+          <a href="#contacto" class="btn">Probar SkinCheck</a>
         </div>
+
         <div class="hero-visual">
-          <!-- Simulación de imagen con icono animado -->
-          <i class="fas fa-spa hero-icon"></i>
+          <i class="fas fa-mobile-screen-button hero-icon"></i>
         </div>
       </div>
     </section>
 
-    <!-- Nosotros -->
+    <!-- PROPÓSITO -->
     <section id="nosotros" class="section">
       <div class="section-header">
-        <h2>Nuestra Filosofía</h2>
+        <h2>Nuestro Propósito</h2>
         <p>
-          Creemos que una piel sana es el reflejo de un bienestar integral.
-          Unimos ciencia y estética para ti.
+          SkinCheck nace para ayudar a las personas a detectar señales tempranas
+          en su piel antes de que representen un riesgo. Democratizamos el
+          acceso a evaluaciones dermatológicas de forma rápida, accesible y
+          confiable.
         </p>
       </div>
-    </section>
 
-    <!-- Servicios -->
-    <section id="servicios" class="section bg-light">
-      <div class="section-header">
-        <h2>Nuestros Servicios</h2>
-      </div>
       <div class="services-grid">
         <div class="service-card">
-          <div class="icon-circle"><i class="fas fa-water"></i></div>
-          <h3>Hidratación Profunda</h3>
+          <div class="icon-circle"><i class="fas fa-brain"></i></div>
+          <h3>IA de grado clínico</h3>
           <p>
-            Restaura la barrera natural de tu piel con nuestros sueros
-            enriquecidos.
+            Analizamos tu imagen comparándola con miles de patrones
+            dermatológicos reales.
           </p>
         </div>
+
         <div class="service-card">
-          <div class="icon-circle"><i class="fas fa-sun"></i></div>
-          <h3>Protección Solar</h3>
-          <p>Tratamientos preventivos y correctivos contra el daño UV.</p>
+          <div class="icon-circle"><i class="fas fa-shield-heart"></i></div>
+          <h3>Prevención temprana</h3>
+          <p>Identifica señales antes de que se vuelvan un problema grave.</p>
         </div>
+
         <div class="service-card">
-          <div class="icon-circle"><i class="fas fa-leaf"></i></div>
-          <h3>Peeling Orgánico</h3>
-          <p>Renovación celular suave utilizando ácidos frutales naturales.</p>
+          <div class="icon-circle">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3>Acceso para todos</h3>
+          <p>
+            Consulta dermatológica preliminar desde tu celular, en segundos.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona" class="section bg-light">
+      <div class="section-header">
+        <h2>¿Cómo funciona SkinCheck?</h2>
+        <p>Usar nuestra app toma menos de 30 segundos.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon-circle"><i class="fas fa-camera"></i></div>
+          <h3>1. Toma una foto</h3>
+          <p>Captura la zona de tu piel que deseas analizar.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon-circle"><i class="fas fa-microchip"></i></div>
+          <h3>2. IA analiza tu piel</h3>
+          <p>Nuestro algoritmo identifica patrones y señales de riesgo.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="icon-circle"><i class="fas fa-file-medical-alt"></i></div>
+          <h3>3. Recibe un informe</h3>
+          <p>
+            Obtén un diagnóstico preliminar y pasos recomendados de cuidado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEMO -->
+    <section id="demo" class="section">
+      <div class="section-header">
+        <h2>Vista Previa de la App</h2>
+        <p>Así luce SkinCheck en funcionamiento.</p>
+      </div>
+
+      <div class="services-grid">
+        <img src="img/app1.png" class="mockup" />
+        <img src="img/app2.png" class="mockup" />
+        <img src="img/app3.png" class="mockup" />
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <h2>Cuida tu piel hoy mismo</h2>
+      <p>Únete a miles de personas que ya analizan su piel con IA.</p>
+      <a href="#contacto" class="btn">Probar SkinCheck</a>
+    </section>
+
+    <!-- FOOTER -->
     <footer id="contacto">
       <div class="footer-grid">
-        <!-- Contacto -->
         <div class="footer-col">
           <h3>Contacto</h3>
           <ul>
             <li>
               <i class="fas fa-map-marker-alt" style="margin-right: 8px"></i>
-              Calle Estética 123, Lima
+              Av. Innovación 404, Lima
             </li>
+
             <li>
-              <i class="fas fa-phone" style="margin-right: 8px"></i> +51 987 654
-              321
+              <i class="fas fa-phone" style="margin-right: 8px"></i>
+              +51 987 654 321
             </li>
+
             <li>
               <i class="fas fa-envelope" style="margin-right: 8px"></i>
-              citas@dermacare.com
+              soporte@skincheck.com
             </li>
           </ul>
         </div>
 
-        <!-- Categorías -->
         <div class="footer-col">
-          <h3>Categorías</h3>
+          <h3>Links</h3>
           <ul>
-            <li><a href="#">Tratamientos Faciales</a></li>
-            <li><a href="#">Cuidado Corporal</a></li>
-            <li><a href="#">Productos</a></li>
-            <li><a href="#">Blog de Salud</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#nosotros">Propósito</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#demo">Demo</a></li>
           </ul>
         </div>
 
-        <!-- Redes Sociales -->
         <div class="footer-col">
-          <h3>Síguenos en</h3>
+          <h3>Síguenos</h3>
           <div class="social-flex">
-            <a href="#" class="social-icon" aria-label="Facebook"
+            <a href="#" class="social-icon"
               ><i class="fab fa-facebook-f"></i
             ></a>
-            <a href="#" class="social-icon" aria-label="YouTube"
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a href="#" class="social-icon" aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
       </div>
 
       <div class="copyright">
-        &copy; 2024 DermaCare. Diseñado para tu bienestar.
+        &copy; 2024 SkinCheck. Innovando en salud dermatológica.
       </div>
     </footer>
 
-    <!-- Script Simple para Menú Móvil -->
+    <!-- Script menú móvil -->
     <script>
       const menuBtn = document.getElementById("mobile-menu-btn");
       const navList = document.getElementById("nav-list");
@@ -157,7 +214,6 @@
       function toggleMenu() {
         navList.classList.toggle("active");
 
-        // Cambiar icono de hamburguesa a X
         if (navList.classList.contains("active")) {
           menuIcon.classList.remove("fa-bars");
           menuIcon.classList.add("fa-times");
